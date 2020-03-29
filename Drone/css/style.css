@@ -1,0 +1,523 @@
+/*GLOBAL*/
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Open Sans Pro', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+/*NAVBAR*/
+.navbar {
+    z-index: 100;  
+    background-color: rgba(0, 0, 0, 0.5); 
+    font-size: 1.2em;
+}
+
+.fa-bars {
+  color: #f7f9fb;
+}
+
+.shadow {
+  text-shadow: 1px 1px black !important;
+}
+
+.nav-link, .navbar-brand {
+  color: #f7f9fb;  
+}
+
+.navbar img {
+  transform: scale(0.7);
+}
+/*ABOUT PAGE ONLY*/
+.shadow {
+  text-shadow: 1px 1px black;
+}
+/*END*/
+
+.nav-item {
+    border-bottom: 1px solid transparent;
+    transition: all ease-in-out 0.25s;
+}
+
+.nav-item:hover {
+    border-color: #f7f9fb;
+}
+
+/* HOME PAGE */
+.video-header {
+    height: 100%;
+    display: flex;
+	  align-items: center;
+    color: #f7f9fb;	
+    
+}
+
+.fullscreen-video-wrap {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+	  z-index: -1;
+}
+
+.fullscreen-video-wrap video{
+	  /* Make video to at least 100% wide and tall */
+      min-width: 100%; 
+      min-height: 100%; 
+      
+      /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+      width: auto;
+      height: auto; 
+      
+      /* Center the video */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);      
+}
+
+/*PORTFOLIO PAGE*/
+/*GRID*/
+.grid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+  
+  .grid-container > div {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-header, .item1, .item2, .item3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    color: #f7f9fb;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .item4 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 50vh;
+    color: #f7f9fb;
+    font-size: 2em;
+    font-weight: 600;
+  }
+  
+ .item1, .item2, .item3, .item4 {
+     width: 50%;
+     border-top: 5px solid #31708e;
+  }
+  
+  /*GRID PICTURES*/
+  .grid-header {
+    background-image: url("../images/our_work_tn.jpg");
+    font-size: 3em;
+    font-weight: medium;
+    text-shadow: 2px 2px black;
+  }
+
+  .item1 {
+    background-image: url("../images/videography_tn.jpg");
+    float: left;
+    position: relative;
+  }
+  
+  .item2 {
+    background-image: url("../images/agriculture_tn.jpg");
+    border-left: 5px solid #31708e;
+    float: right;
+    position: relative;
+  }
+  
+  .item3 {
+    background-image: url("../images/inspections_tn.jpg");
+    float: left;
+    position: relative;
+  }
+  
+  .item4 {
+    background-image: url("../images/real_estate_tn.jpg");
+    border-left: 5px solid #31708e;
+    float: right;
+    position: relative;
+  }
+
+  /*PLAY BUTTON ICON*/
+ .fa-play-circle {
+    position: absolute;
+    top: 65%;
+    cursor: pointer;
+    color: #f7f9fb;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+/*PULSE ANIMATION*/
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform:  scale(1.3);
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: #8fc1e3 !important;
+}
+  
+  /*SERVICES*/
+  .services_bkg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #666;
+    background-color: #f7f9fb;
+  }
+
+  .pimg1, .pimg2, .pimg3, .pimg4, .pimg5 {
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .pimg1 {
+    background-image: url("../images/services1.jpg");
+    min-height: 100vh;
+  }
+  
+  .pimg2 {
+    background-image: url("../images/services2.jpg");
+    min-height: 50vh;
+    clear: left;
+  }
+  
+  .pimg3 {
+    background-image: url("../images/services3.jpg");
+    min-height: 50vh;
+  }
+
+  .pimg4 {
+    background-image: url("../images/services4.jpg");
+    min-height: 50vh;
+  }
+
+  .pimg5 {
+    background-image: url("../images/services5.jpg");
+    min-height: 50vh;
+    background-position: top;
+  }
+    
+  .section > h2 {
+    text-align: center;
+  }
+  
+  .section-dark {
+    background-color: #687864;
+    color: #ddd;
+  }
+  
+  .ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #687864;
+    font-size: 1.5em;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .bigText {
+    font-size: 2.5vw;
+  }
+  
+  .ptext .border {
+    background-color: #111;
+    color: #f7f9fb;
+    padding: 20px;
+  }
+  
+  .ptext .border.trans {
+    background-color: transparent;
+  }    
+
+  /*SERVICES LIST*/
+ .servicesList {
+   text-align: left;   
+ }
+
+ .left, .right {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .left > ul, .right > ul {
+   list-style-type: none;
+ }
+
+ .left li, .right li {
+  list-style-image: url("../images/drone_small.png");
+  padding: 5px;
+}
+ 
+/*CASE STUDY & REVIEW SECTION*/
+.transBorder {
+  border-right: 0.5em solid transparent;  
+}
+.caseStudyBox {
+  background-image:
+        linear-gradient(#282e34, #282e34),
+        linear-gradient(180deg, #687864, #31708e 100%);
+        background-repeat: no-repeat;
+        background-origin: padding-box, border-box;
+}
+
+.caseStudyBox a {
+  color: #8fc1e3;
+}
+
+.border > a {
+  color: #f7f9fb;
+}
+
+/*STATISTICS SECTION*/
+.statisticsBox {
+  background-color: #f7f9fb;
+  font-size: 1.5em;
+}
+
+.num {
+  display: inline;
+}
+
+/*CUSTOMER REVIEWS*/
+.reviewsBox {
+  background-image:
+        linear-gradient(#282e34, #282e34),
+        linear-gradient(180deg, #687864, #31708e 100%);
+        background-repeat: no-repeat;
+        background-origin: padding-box, border-box;
+}
+
+.fa-quote-right, .fa-quote-left {
+  font-size: 1.25em;
+}
+  /*ABOUT US PAGE*/
+  .about_bkg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+}
+
+  .aboutImg1, .aboutImg2, .aboutImg3, .aboutImg4 {
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .aboutImg1 {
+    background-image: url("../images/team.jpeg");
+    min-height: 100%;
+  }
+  
+  .aboutImg2 {
+    background-image: url("../images/headshot1.jpeg");
+    min-height: 50vh;
+  }
+  
+  .aboutImg3 {
+    background-image: url("../images/headshot2.jpeg");
+    min-height: 50vh;
+  }
+
+  .aboutImg4 {
+    background-image: url("../images/headshot4.jpeg");
+    min-height: 50vh;
+  }
+  
+.section {
+    text-align: center;
+    padding: 5vh 5vw;
+  }
+  
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+  }
+
+.aboutText .border.trans {
+    background-color: transparent;
+}
+
+.aboutText {
+    position: relative;
+    height: 50vh;
+    width: 40%;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.asideText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  white-space: wrap;
+}
+
+/*REQUEST DEMO PAGE*/
+
+
+ .formBKG {
+  background-image: url("../images/request_quote.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+form {
+  width: 50%;
+  margin: auto;
+  color: #f7f9fb;
+  background-color: rgba(73, 122, 163, 0.6);
+  font-size: 1.25em;
+  position: relative;
+  top: 20vh;
+  border: 3px solid rgb(73, 122, 163);
+}
+
+.btn-primary {
+   width: 100%;
+   background-color: #97ac92 !important;
+   border: #97ac92 !important;
+}
+
+/*FOOTER*/
+footer {
+  z-index: 2;  
+  width: 100%;
+  font-size: 1.25em;
+  background-color: #687864;
+}
+
+.socialMedia a, .socialMedia p {
+  color: #f7f9fb;
+}
+
+.socialMedia a:hover {
+  color: #31708e;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*MEDIA QUERRIES*/
+@media screen and (max-width: 990px)
+/*DISABLE FIXED SCROLLING ON SERVICES/ABOUT PAGE*/ {
+  .aboutImg1, .aboutImg2, .aboutImg3, .aboutImg4,
+  .services_bkg, .pimg1, .pimg2, .pimg3, .pimg4, .pimg5 {
+    background-attachment: scroll;
+  }   
+/*REMOVE REQUEST DEMO BUTTON*/  
+  .requestButton {
+    display: none;
+  }
+  /*CHANGE PORTFOLIO GRID TO SINGLE COLUMN*/  
+  .grid-header, .item1, .item2, .item3, .item4 {
+    height: 50vh;
+    width: 100%;
+    border-left: 1px solid #31708e;
+  }
+  /*REMOVE PULSE FROM PLAY BUTTON*/ 
+  .fa-play-circle {
+    animation: none;
+  }
+
+  form {
+    border-radius: 5px;
+    background-color: rgba(73, 122, 163, 0.6);
+    padding: 10px;
+    width: 100%;  
+    margin: auto;
+    color: #f7f9fb;
+   }
+
+   .formBKG {
+    height: 100vh;
+    width: 100%;
+  }
+} 
+
+  /*GRID HOVER EFFECTS*/
+@media screen and (min-width: 990px) {
+  .hover-text:hover {
+    font-size: 0px;
+  }  
+  .hover-text:hover:after  {
+    background-color: rgba(0, 0, 0, 0.5);
+    content: attr(data-hover);
+    font-size: 16px;
+  }
+  /*LINK TO REQUEST QUOTE PAGE AT BOTTOM OF SERVICES PAGE*/
+  .border > a:hover {
+    color: #5085a5;
+  }
+  /*REQUEST FORM SUBMIT HOVER*/
+  input[type=submit]:hover {
+    background-color: #687864;
+  }
+  /*NAV LINK HOVER*/
+  .nav-link:hover, .navbar-brand:hover {
+    color: #f7f9fb;
+  }
+}
+
+/*CASE STUDY/REVIEW BOX BORDER GRADIENT*/
+@media screen and (max-width: 576px) {
+  .caseStudyBox {
+    background-image: none;
+  }
+  .reviewsBox {
+    background-image: none;
+  }
+}
